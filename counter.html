@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+     <style>
+        *{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+body{
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: pink;
+}
+
+.box{
+    background: white;
+    padding: 20px;
+    border-radius: 20px;
+    text-align: center;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+    width: 350px;
+}
+
+h1{
+    margin-bottom: 20px;
+    color: #333;
+}
+
+h3{
+    font-size: 70px;
+    margin-bottom: 30px;
+    color: #222;
+}
+
+
+button{
+    padding: 12px 18px;
+    border: none;
+    border-radius: 10px;
+    color: white;
+    font-size: 16px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+#increase{
+    background: #28a745;
+}
+
+#decrease{
+    background: #dc3545;
+}
+
+#reset{
+    background:purple;
+}
+
+button:hover{
+    transform: translateY(-3px);
+    opacity: 0.9;
+}
+      </style>
+</head>
+<body>
+     <div class="box">
+    <h1>counter</h1>
+     <h3>0</h3>
+  
+
+     <div class="button">
+         <button id="decrease">Decrease</button>
+        <button id="reset">Reset</button>
+        <button id="increase">Increase</button>
+
+     </div>
+      </div>
+</body>
+<script>
+    let headOne = document.querySelector("h1")
+    let headThree = document.querySelector("h3")
+
+    let decreaseBtn = document.querySelector("#decrease")
+    let resetBtn = document.querySelector("#reset")
+    let increaseBtn = document.querySelector("#increase")
+    
+    let count = 0 
+        decreaseBtn.addEventListener("click", ()=>{
+
+        count--
+        headThree.innerText = count
+
+    })
+
+        resetBtn.addEventListener("click", ()=>{
+
+        count = 0
+        headThree.innerText = count
+
+    })
+
+
+        increaseBtn.addEventListener("click", ()=>{
+
+        count++
+        headThree.innerText = count
+
+    })
+    
+        
+
+
+    
+        
+    
+
+</script>
+</html>
